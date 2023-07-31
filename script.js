@@ -17,7 +17,7 @@ window.addEventListener("load", function() {
     const cargoMass = document.querySelector("input[name=cargoMass]"); 
     const form = document.querySelector("form");
     
-   // faultyItems.style.visibility = "hidden";
+    faultyItems.style.visibility = "hidden";
 
     form.addEventListener("submit", function(event) {
         formSubmission(document, faultyItems, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value);
