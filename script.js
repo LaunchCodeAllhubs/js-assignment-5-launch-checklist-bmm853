@@ -15,8 +15,14 @@ window.addEventListener("load", function() {
     const copilotName = document.querySelector("input[name=copilotName]");
     const fuelLevel = document.querySelector("input[name=fuelLevel]");
     const cargoMass = document.querySelector("input[name=cargoMass]"); 
+    const form = document.querySelector("form");
     
-    formSubmission(document, faultyItems, pilotName, copilotName, fuelLevel, cargoMass);
+   // faultyItems.style.visibility = "hidden";
+
+    form.addEventListener("submit", function(event) {
+        formSubmission(document, faultyItems, pilotName.value, copilotName.value, fuelLevel.value, cargoMass.value);
+        event.preventDefault();
+    });
 
    let listedPlanets;
    // Set listedPlanetsResponse equal to the value returned by calling myFetch()
